@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import searchForImages from './search-bar-action.js';
+import {searchForImages} from './search-bar-action.js';
 
 export class SearchBar extends React.Component {
   onSubmit(e) {
     e.preventDefault();
-    this.props.dispatch(actions.searchForImages(this.textInput))
+    this.props.dispatch(searchForImages(this.textInput.value))
   }
 
   render() {

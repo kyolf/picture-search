@@ -1,4 +1,4 @@
-import actions from './search-bar-action.js';
+import * as actions from './search-bar-action.js';
 
 const initialState = {
   imageList: [],
@@ -14,5 +14,7 @@ export const searchBarReducer = (state = initialState, action) => {
       return Object.assign({}, state, {loading: false, imageList: action.imageList});
     case actions.SEARCH_FOR_IMAGES_ERROR:
       return Object.assign({}, state, {loading: false, error: action.error});
+    default:
+      return state;
   }
 }
