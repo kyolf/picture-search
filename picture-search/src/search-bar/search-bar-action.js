@@ -3,7 +3,6 @@ require('dotenv').config();
 
 export const SEARCH_FOR_IMAGES = 'SEARCH_FOR_IMAGES';
 export const searchForImages = (text) => dispatch => {
-  console.log(text);
   dispatch(searchForImagesRequest());
   return fetch(
         `https://api.gettyimages.com/v3/search/images?fields=id,title,thumb,referral_destinations&sort_order=best&phrase=${text}`,
@@ -17,11 +16,9 @@ export const searchForImages = (text) => dispatch => {
           if(!response.ok) {
             Promise.reject(response.statusText);
           }
-          console.log(response, 'jey');
           return response.json();
         })
         .then(images => {
-          console.log(images);
           return dispatch(searchForImagesSuccess(images))
         })
         .catch(error => {
