@@ -1,8 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { link } from 'fs';
+import { changeOverlay } from './show-pictures-action.js';
+
 
 export class ShowPictures extends React.Component{
+  showOverlay(e, img, title) {
+    e.preventDefault();
+    this.props.dispatch(changeOverlay(img, title, true));
+  }
+
   renderPictures() {
     let imgList = this.props.imageList.images;
     let limitTenImgs = [];
@@ -17,7 +23,8 @@ export class ShowPictures extends React.Component{
       return limitTenImgs.map((el, i) => {
         return <aside key={i}> 
                 <img src={`${imgList[i].display_sizes[0].uri}`} 
-                    alt={`${imgList[i].title}`} />
+                    alt={`${imgList[i].title}`}
+                    onClick={(e) => this.showOverlay(e, imgList[i].display_sizes[0].uri, imgList[i].title)} />
                 <p>{imgList[i].title}</p>
               </aside>;
       })
@@ -27,6 +34,13 @@ export class ShowPictures extends React.Component{
   render() {
     return (
       <div>
+        {this.props.picOverlay === true ? 
+          <div className="overlay-img">
+            <img src={`${this.props.picSrc}`} 
+                 alt={`${this.props.picTitle}`} />
+            <p>{this.props.picTitle}</p>
+            <p onClick={(e) => this.closeOverlay(e)}>X</p>
+          </div>: null}
         {this.renderPictures()}
       </div>
     )
@@ -34,7 +48,10 @@ export class ShowPictures extends React.Component{
 }
 
 const mapStateToProps = state => ({
-  imageList: state.search.imageList
+  imageList: state.search.imageList,
+  picOverlay: state.picture.hasOverlay,
+  picSrc: state.picture.img,
+  picTitle: state.picture.title
 });
 
 export default connect(mapStateToProps)(ShowPictures);

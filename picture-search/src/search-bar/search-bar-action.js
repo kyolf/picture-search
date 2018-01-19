@@ -1,6 +1,3 @@
-//import {KEY} from '../config.js'
-require('dotenv').config();
-
 export const SEARCH_FOR_IMAGES = 'SEARCH_FOR_IMAGES';
 export const searchForImages = (text) => dispatch => {
   dispatch(searchForImagesRequest());
