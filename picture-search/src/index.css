@@ -1,6 +1,14 @@
 body,
-html {
+html,
+main {
   height: 100%;
   width: 100%; }
+
+main {
+  display: flex;
+  flex-direction: column; }
+
+main > h1 {
+  text-align: center; }
 
 /*# sourceMappingURL=index.css.map */
