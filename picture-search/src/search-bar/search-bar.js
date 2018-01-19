@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default class SearchBar extends React.Component {
+export class SearchBar extends React.Component {
   onSubmit(e) {
     e.preventDefault();
-    
+    this.props.dispatch(actions.searchForImages(this.textInput))
   }
 
   render() {
@@ -18,3 +18,9 @@ export default class SearchBar extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  
+});
+
+export default connect(mapStateToProps)(SearchBar);
