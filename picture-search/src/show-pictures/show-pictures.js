@@ -9,6 +9,11 @@ export class ShowPictures extends React.Component{
     this.props.dispatch(changeOverlay(img, title, true));
   }
 
+  closeOverlay(e) {
+    e.preventDefault();
+    this.props.dispatch(changeOverlay(null, null, false));
+  }
+
   renderPictures() {
     let imgList = this.props.imageList.images;
     let limitTenImgs = [];
