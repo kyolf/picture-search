@@ -1,4 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
+
+import searchForImages from './search-bar-action.js';
 
 export class SearchBar extends React.Component {
   onSubmit(e) {
@@ -20,7 +23,7 @@ export class SearchBar extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  
+
 });
 
 export default connect(mapStateToProps)(SearchBar);
