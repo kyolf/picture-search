@@ -36,12 +36,12 @@ export const searchForImagesRequest = () => ({
 
 export const SEARCH_FOR_IMAGES_SUCCESS = 'SEARCH_FOR_IMAGES_SUCCESS';
 export const searchForImagesSuccess = (imageList) => ({
-  type: SEARCH_FOR_IMAGES_REQUEST,
+  type: SEARCH_FOR_IMAGES_SUCCESS,
   imageList
 });
 
 export const SEARCH_FOR_IMAGES_ERROR = 'SEARCH_FOR_IMAGES_ERROR';
 export const searchForImagesError = (error) => ({
-  type: SEARCH_FOR_IMAGES_REQUEST,
+  type: SEARCH_FOR_IMAGES_ERROR,
   error
 });
