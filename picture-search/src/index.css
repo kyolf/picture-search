@@ -48,8 +48,32 @@ main {
   color: white;
   opacity: 1; }
 
-.img-container {
-  margin: 20px auto; }
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  height: 6000px;
+  position: absolute;
+  width: 100%; }
+
+.overlay-img-close {
+  margin: 0;
+  position: fixed;
+  right: 10%;
+  top: 40%; }
+
+.overlay-img-container {
+  height: 100%;
+  position: fixed;
+  margin: 95px 0;
+  width: 100%; }
+
+.overlay-img-container > img {
+  display: block;
+  margin: 0 auto 30px;
+  width: 220px; }
+
+.overlay-img-title {
+  margin: 0 20px; }
 
 .ten-img {
   display: block;

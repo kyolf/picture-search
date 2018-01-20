@@ -41,12 +41,16 @@ export class ShowPictures extends React.Component{
     return (
       <section className="img-container">
         {this.props.picOverlay === true ? 
-          <div className="overlay-img">
-            <img src={`${this.props.picSrc}`} 
-                 alt={`${this.props.picTitle}`} />
-            <p>{this.props.picTitle}</p>
-            <p onClick={(e) => this.closeOverlay(e)}>X</p>
-          </div>: null}
+          <aside className="bg-overlay">
+            <div className="overlay-img-container">
+              <img src={`${this.props.picSrc}`} 
+                    alt={`${this.props.picTitle}`} />
+              <p className="overlay-img-title">{this.props.picTitle}</p>
+              <p className="overlay-img-close"
+                  onClick={(e) => this.closeOverlay(e)}>X</p>
+            </div>
+          </aside>
+          : null}
         {this.renderPictures()}
       </section>
     )
