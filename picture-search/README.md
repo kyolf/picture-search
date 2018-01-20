@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+## Link to the Project
+https://image-searcher.netlify.com/
+
 ## Planning the Project
 1. When I started the project, I used create-react-app to create a react template.
 2. Then I formatted the files and folders in the src folder by components. I organized the folder names by components as opposed to creating a component and css folder and dumping all components to the component folder and all css files in the css folder because it is easier to navigate through the folder and find the files you need when your app gets bigger. 
