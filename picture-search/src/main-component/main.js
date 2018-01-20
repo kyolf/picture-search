@@ -6,8 +6,10 @@ export default class Main extends React.Component {
   render() {
     return (
       <main>
-        <h1>Image Searcher</h1>
-        <SearchBar />
+        <section className="title-search-container">
+          <h1>Image Searcher</h1>
+          <SearchBar />
+        </section>
         <ShowPictures />
       </main>
     );

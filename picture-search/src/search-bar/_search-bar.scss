@@ -1,0 +1,28 @@
+@mixin input-border($hasBorder) {
+  border-top: $hasBorder;
+  border-left: $hasBorder;
+  border-right: $hasBorder;
+}
+
+.search-container {
+  width: 100%;
+  height: 150px;
+}
+
+.search-container form {
+  margin: 70px 20px;
+  text-align: center;
+}
+
+.search-container input {
+  @include input-border(none);
+  background-color: $title-search-bg-color;
+  border-bottom: 1px solid black;
+  margin-right: 10px;
+  width: 55%;
+}
+
+.search-container input::placeholder {
+  color: white;
+  opacity: 1;
+}

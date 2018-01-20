@@ -3,6 +3,15 @@ main {
   flex-direction: column;
 }
 
-main > h1 {
+.title-search-container {
+  background-color: $title-search-bg-color;
+  height: 250px;
+}
+
+.title-search-container > h1 {
+  color: white;
+  font-family: $header-font;
+  font-size: 24px;
+  margin-top: 40px;
   text-align: center;
 }

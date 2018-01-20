@@ -11,13 +11,13 @@ export class SearchBar extends React.Component {
 
   render() {
     return (
-      <div>
+      <section className="search-container">
         <form onSubmit={(e)=> this.onSubmit(e)}>
           <input type="text" placeholder="Search for image"
                 ref={input => this.textInput = input}/>
           <button type='submit'>Search</button>
         </form>
-      </div>
+      </section>
     );
   }
 }

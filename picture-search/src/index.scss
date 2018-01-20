@@ -1,8 +1,15 @@
+$header-font: 'Ruda', Sans-Serif;
+$normal-font: 'Roboto Slab', Serif;
+$title-search-bg-color: #2481df;
+
 body,
 html,
 main {
+  font-family: $normal-font;
   height: 100%;
+  margin: 0;
   width: 100%;
 }
 
 @import './main-component/main';
+@import './search-bar/search-bar';
