@@ -7,27 +7,29 @@
 }
 
 .overlay-img-close {
+  font-size: 24px;
   margin: 0;
-  position: fixed;
+  position: absolute;
   right: 10%;
-  top: 40%;
+  top: -1%;
 }
 
 .overlay-img-container {
   height: 100%;
-  position: fixed;
-  margin: 95px 0;
+  position: absolute;
+  margin: 50% 0;
   width: 100%;
 }
 
 .overlay-img-container > img {
   display: block;
-  margin: 0 auto 30px;
-  width: 220px;
+  margin: 5% auto 30px;
+  width: 65%;
 }
 
 .overlay-img-title {
   margin: 0 20px;
+  text-align: center;
 } 
 
 .ten-img {
@@ -67,8 +69,7 @@
   }
 
   .overlay-img-container > img {
-    margin: 0 auto 45px;
-    width: 300px;
+    margin: 5% auto 45px;
   }
 
   .ten-img {
@@ -86,12 +87,8 @@
 }
 
 @media only screen and (min-width: 700px) {
-  .overlay-img-container {
-    margin: 70px 0;
-  }
-
   .overlay-img-container > img {
-    width: 400px;
+    margin: 5% auto 60px;
   }
 
   .overlay-img-title {
@@ -117,16 +114,15 @@
   }
 
   .overlay-img-close {
-    top: 36%;
+    font-size: 32px;
   }
 
   .overlay-img-container {
     font-size: 24px;
-    margin: -20px 0;
   }
 
   .overlay-img-container > img {
-    width: 40%;
+    margin: 5% auto 70px;
   }
 
   .ten-img {
@@ -139,25 +135,5 @@
     margin: 40px auto;
     padding: 50px 20px;
     width: 40%;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  .overlay-img-close {
-    top: 28%;
-  }
-
-  .overlay-img-container {
-    margin: -140px 0;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .overlay-img-close {
-    top: 12%;
-  }
-
-  .overlay-img-container {
-    margin: -200px 0;
   }
 }
