@@ -36,12 +36,31 @@ export class SearchBar extends React.Component {
       this.props.dispatch(searchForImages(newWord));
     }
     else {
-      //this.checkForVowels(newWord);
+      this.checkForVowels(newWord);
     }
   }
 
   checkForVowels(word) {
-    
+    let vowels = 'aeiou';
+    let realWords = [];
+    for(let i = 0; i < word.length; i++) {
+      if(vowels.includes(word.charAt(i))){
+        for(let j = 0; j < vowels.length; j ++) {
+          let newWord = word.slice(0, i) + vowels.charAt(j) + word.slice(i+1);
+          console.log(newWord);
+          if(wordList.includes(newWord)) {
+            realWords.push(newWord);
+          }
+        }
+      }
+    }
+
+    if(realWords.length !== 0) {
+      this.props.dispatch(searchForImages(realWords[0]));
+    }
+    else {
+      alert('No Words Found!');
+    }
   }
 
   render() {
