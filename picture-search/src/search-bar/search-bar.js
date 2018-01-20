@@ -31,7 +31,7 @@ export class SearchBar extends React.Component {
         newWord += word.charAt(i);
       }
     }
-    console.log(newWord);
+    
     if(wordList.includes(newWord)) {
       this.props.dispatch(searchForImages(newWord));
     }
@@ -47,7 +47,7 @@ export class SearchBar extends React.Component {
       if(vowels.includes(word.charAt(i))){
         for(let j = 0; j < vowels.length; j ++) {
           let newWord = word.slice(0, i) + vowels.charAt(j) + word.slice(i+1);
-          console.log(newWord);
+          
           if(wordList.includes(newWord)) {
             realWords.push(newWord);
           }
