@@ -117,12 +117,12 @@
   }
 
   .overlay-img-close {
-    top: 28%;
+    top: 36%;
   }
 
   .overlay-img-container {
     font-size: 24px;
-    margin: -5px 0;
+    margin: -20px 0;
   }
 
   .overlay-img-container > img {
@@ -142,22 +142,22 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   .overlay-img-close {
-    top: 25%;
+    top: 28%;
   }
 
   .overlay-img-container {
-    margin: -30px 0;
+    margin: -140px 0;
   }
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1200px) {
   .overlay-img-close {
-    top: 22%;
+    top: 12%;
   }
 
   .overlay-img-container {
-    margin: -55px 0;
+    margin: -200px 0;
   }
 }

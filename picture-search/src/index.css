@@ -21,6 +21,13 @@ main {
   margin-top: 40px;
   text-align: center; }
 
+@media only screen and (min-width: 850px) {
+  .title-search-container {
+    height: 350px; }
+
+  .title-search-container > h1 {
+    font-size: 40px;
+    margin-top: 60px; } }
 .search-container {
   font-size: 20px;
   height: 100%;
@@ -51,6 +58,10 @@ main {
   color: white;
   opacity: 1; }
 
+@media only screen and (min-width: 850px) {
+  .search-container input {
+    margin-right: 40px;
+    width: 45%; } }
 .bg-overlay {
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
@@ -141,11 +152,11 @@ main {
     flex-wrap: wrap; }
 
   .overlay-img-close {
-    top: 28%; }
+    top: 36%; }
 
   .overlay-img-container {
     font-size: 24px;
-    margin: -5px 0; }
+    margin: -20px 0; }
 
   .overlay-img-container > img {
     width: 40%; }
@@ -159,17 +170,17 @@ main {
     margin: 40px auto;
     padding: 50px 20px;
     width: 40%; } }
+@media only screen and (min-width: 1000px) {
+  .overlay-img-close {
+    top: 28%; }
+
+  .overlay-img-container {
+    margin: -140px 0; } }
 @media only screen and (min-width: 1200px) {
   .overlay-img-close {
-    top: 25%; }
+    top: 12%; }
 
   .overlay-img-container {
-    margin: -30px 0; } }
-@media only screen and (min-width: 1300px) {
-  .overlay-img-close {
-    top: 22%; }
-
-  .overlay-img-container {
-    margin: -55px 0; } }
+    margin: -200px 0; } }
 
 /*# sourceMappingURL=index.css.map */
