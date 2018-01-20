@@ -10,13 +10,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Planning the Spell Checker Algorithm
 1. When creating the spell checker algorithm, I had to implement 2 features which were removing non-letter characters and replacing vowels in characters.
 2. For removing non-letter characters, 
-  1. Create a variable that stores an empty string.
-  2. Go through the word.
-  3. Add the letters from the word that are letters and skip over non-letters.
-  4. Check if the newWord exist or not. If it does, do the api call. If it doesn't, then call the replace vowel algorithm.
+    1. Create a variable that stores an empty string.
+    2. Go through the word.
+    3. Add the letters from the word that are letters and skip over non-letters.
+    4. Check if the newWord exist or not. If it does, do the api call. If it doesn't, then call the replace vowel algorithm.
 3. For the replace vowel algorithm, I wasn't able to think of a recursive algorthm that displays all the words with different vowels. As a result, I came up with a algorithm that works some of the time.
-  1. Create a array that stores all the words that exist.
-  2. Go through the word that have no non-letters.
-  3. Check if the current letter is a vowel of not. If it is, then go through the string that contains all vowels and replace the current vowel.
-  4. As you replace them, check if the word exists. If it does, then add it to the array.
-  5. Once you finish going through each letter of the word, then do a api call if array has any words in them. 
+    1. Create a array that stores all the words that exist.
+    2. Go through the word that have no non-letters.
+    3. Check if the current letter is a vowel of not. If it is, then go through the string that contains all vowels and replace the current vowel.
+    4. As you replace them, check if the word exists. If it does, then add it to the array.
+    5. Once you finish going through each letter of the word, then do a api call if array has any words in them. 
