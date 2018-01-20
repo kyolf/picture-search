@@ -110,5 +110,54 @@
 }
 
 @media only screen and (min-width: 850px) {
+  .img-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .overlay-img-close {
+    top: 28%;
+  }
+
+  .overlay-img-container {
+    font-size: 24px;
+    margin: -5px 0;
+  }
+
+  .overlay-img-container > img {
+    width: 40%;
+  }
+
+  .ten-img {
+    height: 80%;
+    margin: 0 auto 30px;
+    width: 80%;
+  }
   
+  .ten-img-container {
+    margin: 40px auto;
+    padding: 50px 20px;
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .overlay-img-close {
+    top: 25%;
+  }
+
+  .overlay-img-container {
+    margin: -30px 0;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .overlay-img-close {
+    top: 22%;
+  }
+
+  .overlay-img-container {
+    margin: -55px 0;
+  }
 }
