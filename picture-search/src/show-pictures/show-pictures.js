@@ -26,9 +26,10 @@ export class ShowPictures extends React.Component{
 
     if(limitTenImgs.length !== 0) {
       return limitTenImgs.map((el, i) => {
-        return <aside key={i}> 
+        return <aside key={i} className="ten-img-container"> 
                 <img src={`${imgList[i].display_sizes[0].uri}`} 
                     alt={`${imgList[i].title}`}
+                    className="ten-img"
                     onClick={(e) => this.showOverlay(e, imgList[i].display_sizes[0].uri, imgList[i].title)} />
                 <p>{imgList[i].title}</p>
               </aside>;
@@ -38,7 +39,7 @@ export class ShowPictures extends React.Component{
   
   render() {
     return (
-      <div>
+      <section className="img-container">
         {this.props.picOverlay === true ? 
           <div className="overlay-img">
             <img src={`${this.props.picSrc}`} 
@@ -47,7 +48,7 @@ export class ShowPictures extends React.Component{
             <p onClick={(e) => this.closeOverlay(e)}>X</p>
           </div>: null}
         {this.renderPictures()}
-      </div>
+      </section>
     )
   }
 }
